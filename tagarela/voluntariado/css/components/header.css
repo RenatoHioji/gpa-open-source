@@ -1,0 +1,20 @@
+@import url('../variables.css');
+@import url('../globals.css');
+
+header {
+    background-color: var(--roxo);
+    width: 100vw;
+    height: 20%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 32px;
+}
+
+nav > a {
+    padding: 40px;
+    text-decoration: none;
+    color: var(--branco);
+    font-family: "Jost", sans-serif;
+}

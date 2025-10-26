@@ -5,6 +5,10 @@
     font-family: "Jost", sans-serif;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     overflow-x: hidden;
 }

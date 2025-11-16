@@ -20,17 +20,7 @@
 </head>
 
 <body>
-    <header>
-        <img alt="Logo do GPA" src="assets/svg/logo_gpa.svg">
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../adocoes/index.html">Adoções</a>
-            <a href="../apadrinhamento/index.html">Apadrinhamento</a>
-            <a href="#">Voluntariado</a>
-            <a href="../catbiosearch-financeiro/index.html">Financeiro</a>
-            <a href="../informativo_contato/index.html">Informativo</a>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
     <section class="hero">
         <div class="hero-banner">
             <div class="hero-content">
@@ -232,30 +222,30 @@
             </p>
         </div>
     </section>
+    <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('header.html')
+                .then(response => {
+                    if (!response.ok) throw new Error(`Erro ao carregar header: ${response.status}`);
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Erro ao inserir header:', error));
 
-    <footer>
-        <img src="assets/svg/logo_gpa.svg" alt="Logo do GPA">
-        <p>Ajudar é o primeiro passo para transformar o mundo e começa com um simples gesto.</p>
-        <div class="footer-social-media">
-            <div class="footer-square">
-                <img src="assets/svg/instagram.svg" alt="Logo do Instagram">
-            </div>
-            <div class="footer-square">
-                <img src="assets/svg/twitter.svg" alt="Logo do Twitter">
-            </div>
-            <div class="footer-square">
-                <img src="assets/svg/youtube.svg" alt="Logo do Youtube">
-            </div>
-            <div class="footer-square">
-                <img src="assets/svg/facebook.svg" alt="Logo do Facebook">
-            </div>
-            <div class="footer-square">
-                <img src="assets/svg/linkedln.svg" alt="Logo do Linkedln">
-            </div>
-        </div>
-        <p>&copy; 2025 ONG GPA - Grupo de Proteção Animal</p>
-        <p>Todos os direitos reservados.</p>
-    </footer>
+            fetch('footer.html')
+                .then(response => {
+                    if (!response.ok) throw new Error(`Erro ao carregar footer: ${response.status}`);
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Erro ao inserir footer:', error));
+        });
+    </script>
 </body>
 
 </html>

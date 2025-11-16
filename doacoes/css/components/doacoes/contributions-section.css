@@ -49,26 +49,54 @@
   text-align: center;
   padding: 0 1rem;
 }
-
 .contrib-card__media {
   width: 120px;
   height: 120px;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
-  background: var(--laranja);
-  display: grid;
-  place-items: center;
+  background-color: var(--laranja); /* fundo laranja no container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;              /* cria uma borda laranja em volta da imagem */
+  box-sizing: border-box;
   overflow: hidden;
 }
+
+.donation-section__circle-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+
+  background-color: var(--laranja);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.donation-section__circle {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+
 
 .contrib-card__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;      /* imagem redonda */
   display: block;
-  border-radius: 50%;
+  background-color: transparent; /* garante que a cor vem do container */
   pointer-events: none;
 }
+
 
 .contrib-card__title {
   color: var(--roxo);

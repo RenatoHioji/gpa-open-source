@@ -1,0 +1,132 @@
+@import url("../variables.css");
+@import url("../global.css");
+
+.contributions-section {
+  background: white;
+  color: #2c2c2c;
+  padding: clamp(3rem, 6vw, 5.5rem) 1.5rem;
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+.contributions-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.contributions-section__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--roxo);
+  margin: 0 0 0.5rem;
+}
+
+.contributions-section__highlight {
+  color: var(--laranja);
+  display: inline-block;
+}
+
+.contributions-section__lead {
+  max-width: 70ch;
+  margin: 0 auto 2.5rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.contributions-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+  margin-top: 7rem;
+}
+
+.contrib-card {
+  background: transparent;
+  text-align: center;
+  padding: 0 1rem;
+}
+.contrib-card__media {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background-color: var(--laranja); /* fundo laranja no container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;              /* cria uma borda laranja em volta da imagem */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.donation-section__circle-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+
+  background-color: var(--laranja);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.donation-section__circle {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+.contrib-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;      /* imagem redonda */
+  display: block;
+  background-color: transparent; /* garante que a cor vem do container */
+  pointer-events: none;
+}
+
+
+.contrib-card__title {
+  color: var(--roxo);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0.6rem 0 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.contrib-card__desc {
+  color: #2c2c2c;
+  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 36ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 880px) {
+  .contributions-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contributions-section__inner {
+    text-align: center;
+  }
+
+  .contributions-section__lead {
+    margin-bottom: 2rem;
+  }
+}

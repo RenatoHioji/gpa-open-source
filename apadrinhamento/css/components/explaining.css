@@ -70,3 +70,13 @@
 .explaining-flow-text h5 {
   color: var(--cinza);
 }
+
+.explaining-content-flow {
+    align-items: center; 
+}
+
+.arrow {
+    width: 50px;
+    pointer-events: none;
+    user-select: none;
+}
